@@ -1,0 +1,4 @@
+01/15/2021 10:20:30 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: Homepage is not loaded properly !!!
+01/15/2021 10:20:33 AM - HomeNavigation - INFO: Element found with locator: //a[contains(text(),'Login')] and locatorType: xpath
+01/15/2021 10:20:34 AM - HomeNavigation - INFO: clicked on element with locator: //a[contains(text(),'Login')] locatorType: xpath
+01/15/2021 10:20:34 AM - TestStatus - INFO: ### VERIFICATION SUCCESSFUL :: navigation to login page failed
