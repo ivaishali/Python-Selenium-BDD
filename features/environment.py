@@ -1,16 +1,10 @@
-import time
-from time import sleep
-
-import allure
-from allure_commons.types import AttachmentType
-from utils.driver_utils import *
-
+import os
 from base.webdriverfactory import WebDriverFactory
 
 IDLE_TIMER = 3
 
 global gCWD, gSCREEN_SHOTS_PATH
-gCWD = os.getcwd()
+CWD = os.getcwd()
 gSCREEN_SHOTS_PATH = CWD + "/reports/screenshots/"
 
 
