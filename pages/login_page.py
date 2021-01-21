@@ -21,4 +21,5 @@ class LoginPage(BasePage):
     def login(self, email, password):
         self.sendKeys(email, *self.locator(self.loginPage_locators, 'input_email'))
         self.sendKeys(password, *self.locator(self.loginPage_locators, 'input_password'))
+        self.capture_screenshot_of_element(*self.locator(self.loginPage_locators, 'btn_login'), fileName="btn_login")
         self.elementClick(*self.locator(self.loginPage_locators, 'btn_login'))

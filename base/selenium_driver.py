@@ -14,7 +14,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 import utils.custom_logger as cl
 
 
-class SeleniumDriver():
+class SeleniumDriver:
     log = cl.customLogger(logging.DEBUG)
 
     def __init__(self, driver):
@@ -193,6 +193,22 @@ class SeleniumDriver():
             if locator:
                 element = self.getElement(locator, locatorType)
             element.click()
+            self.log.info("clicked on element with locator: " + locator +
+                          " locatorType: " + locatorType)
+        except:
+            self.log.error("cannot click on the element with locator: " + locator +
+                           " locatorType: " + locatorType)
+            print_stack()
+
+    def capture_screenshot_of_element(self, locator="", locatorType="id", element=None, fileName="element"):
+        """
+        Either provide element or a combination of locator and locatorType
+        """
+
+        try:
+            if locator:
+                element = self.getElement(locator, locatorType)
+            element.screenshot(".\\ElementSS\\"+fileName+".png")
             self.log.info("clicked on element with locator: " + locator +
                           " locatorType: " + locatorType)
         except:
